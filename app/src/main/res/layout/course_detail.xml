@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+    <ImageView
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/pic"
+        />
+    <TextView
+        android:id="@+id/topicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên chủ đề"
+        app:layout_constraintTop_toBottomOf="@id/pic"
+        app:layout_constraintRight_toLeftOf=""
+        android:gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/topicRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Độ khó chủ đề"
+        app:layout_constraintTop_toBottomOf="@id/topicName"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <TextView
+        android:id="@+id/topicDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mô tả chủ đề"
+        app:layout_constraintTop_toBottomOf="@id/topicRate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topicDescription"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Bắt đầu"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
