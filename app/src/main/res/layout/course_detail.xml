@@ -5,6 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="<"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        />
     <ImageView
         android:src="@drawable/ic_launcher_background"
         android:layout_width="match_parent"
@@ -14,6 +22,8 @@
         android:id="@+id/pic"
         />
     <TextView
+
+        android:paddingLeft ="10dp"
         android:id="@+id/topicName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,14 +33,17 @@
         android:gravity="center_horizontal"
         />
     <TextView
+        android:paddingLeft ="10dp"
         android:id="@+id/topicRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Độ khó chủ đề"
         app:layout_constraintTop_toBottomOf="@id/topicName"
         app:layout_constraintLeft_toLeftOf="parent"
+
         />
     <TextView
+        android:paddingLeft ="10dp"
         android:id="@+id/topicDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -38,15 +51,47 @@
         app:layout_constraintTop_toBottomOf="@id/topicRate"
         app:layout_constraintLeft_toLeftOf="parent"
         />
+    <TextView
+        android:paddingLeft ="10dp"
+        android:id="@+id/topicMission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhiệm vụ"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topicDescription"
+        />
+    <TextView
+        android:paddingLeft ="10dp"
+        android:id="@+id/topicMission_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topicMission"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Test"
+        />
     <Button
+        android:textColor="#0C988B"
+        android:textSize="20dp"
+        android:id="@+id/btnSuggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="#BAE3E8"
+        android:text="Mẫu câu nên dùng"
+        android:layout_marginRight="50dp"
+        app:layout_constraintBottom_toTopOf="@id/btnStart"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:textSize="20dp"
         android:id="@+id/btnStart"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/topicDescription"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:text="Bắt đầu"
         android:layout_marginLeft="50dp"
+        android:backgroundTint="#0C988B"
         android:layout_marginRight="50dp"
-        />
+        android:text="Bắt đầu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
