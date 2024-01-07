@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:text="Tên chủ đề"
         app:layout_constraintTop_toBottomOf="@id/pic"
-        app:layout_constraintRight_toLeftOf=""
+        app:layout_constraintRight_toLeftOf="parent"
         android:gravity="center_horizontal"
         />
     <TextView
