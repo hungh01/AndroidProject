@@ -22,7 +22,6 @@
         android:id="@+id/pic"
         />
     <TextView
-
         android:paddingLeft ="10dp"
         android:id="@+id/topicName"
         android:layout_width="wrap_content"
