@@ -12,7 +12,8 @@
         android:text="Back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBaseline_toTopOf="parent"
-
+        android:minHeight="0dp"
+        android:minWidth="0dp"
         />
     <TextView
         android:id="@+id/topic"
