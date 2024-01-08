@@ -10,12 +10,14 @@ import android.widget.TextView;
 import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends AppCompatActivity {
-    MaterialButton btnBack;
+    //MaterialButton btnBack;
     ImageButton topic1,topic2,topic3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.course_main);
+
+        //btnBack=findViewById(R.id.btnBack);
        topic1=findViewById(R.id.Topic1);
        topic2=findViewById(R.id.Topic2);
        topic3=findViewById(R.id.Topic3);
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //setting text on text view on course_detail layout for topic1
+                setContentView(R.layout.course_detail);
                 TextView textview=findViewById(R.id.topicName);
                 textview.setText("Giới thiệu bản thân");
                 setContentView(R.layout.course_detail);
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //setting text on text view on course_detail layout for topic2
+                setContentView(R.layout.course_detail);
                 TextView textview=findViewById(R.id.topicName);
                 textview.setText("Môn học yêu thích");
                 setContentView(R.layout.course_detail);
@@ -41,17 +45,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //setting text on text view on course_detail layout for topic3
+                setContentView(R.layout.course_detail);
                 TextView textview=findViewById(R.id.topicName);
                 textview.setText("Làm gì trong tg rảnh ?");
                 setContentView(R.layout.course_detail);
             }
         });
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getOnBackPressedDispatcher().onBackPressed();
-            }
-        });
+
     }
 
 }
