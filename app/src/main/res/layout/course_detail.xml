@@ -12,6 +12,7 @@
         android:text="Back"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBaseline_toTopOf="parent"
+
         />
     <ImageView
         android:src="@drawable/ic_launcher_background"
@@ -20,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:id="@+id/pic"
+
         />
     <TextView
         android:paddingLeft ="10dp"

@@ -13,6 +13,7 @@ import com.google.android.material.button.MaterialButton;
 public class DetailsActivity extends AppCompatActivity {
     Button btnBack;
     TextView topicName,topicRate,topicDescription,topicMission,topicMission_details;
+    Button suggest, start;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,15 @@ public class DetailsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //setting text on text view on course_detail layout for topic1
                 getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+        suggest=findViewById(R.id.btnSuggest);
+        suggest.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                //setting text on text view on course_detail layout for topic1
+                Intent i = new Intent(v.getContext(), SuggestActivity.class);
+                startActivity(i);
             }
         });
     }
