@@ -2,6 +2,8 @@ package com.example.androidproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -9,46 +11,65 @@ import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
-    //MaterialButton btnBack;
+
     ImageButton topic1,topic2,topic3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.course_main);
 
-        //btnBack=findViewById(R.id.btnBack);
+
        topic1=findViewById(R.id.Topic1);
        topic2=findViewById(R.id.Topic2);
        topic3=findViewById(R.id.Topic3);
         topic1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //setting text on text view on course_detail layout for topic1
-                setContentView(R.layout.course_detail);
-                TextView textview=findViewById(R.id.topicName);
-                textview.setText("Giới thiệu bản thân");
-                setContentView(R.layout.course_detail);
-            }
+                public void onClick(View v) {
+                    //setting text on text view on course_detail layout for topic1
+                    Intent i = new Intent(v.getContext(), DetailsActivity.class);
+                   // TextView topic = findViewById(R.id.topicName);
+                    //topic.setText("Giới thiệu bản thân");
+                    i.putExtra("topicName","Giới thiệu bản thân");
+                    i.putExtra("topicRate","4/5");
+                    i.putExtra("topicDescription","Chi tiết của chủ đề");
+                    i.putExtra("topicMission","Nhiệm vụ của chủ đề");
+                    i.putExtra("topicMission_details","Chi tiết nhiệm vụ");
+                    startActivity(i);
+
+                }
+
         });
         topic2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //setting text on text view on course_detail layout for topic2
-                setContentView(R.layout.course_detail);
-                TextView textview=findViewById(R.id.topicName);
-                textview.setText("Môn học yêu thích");
-                setContentView(R.layout.course_detail);
+                Intent i = new Intent(v.getContext(), DetailsActivity.class);
+                //TextView topic = findViewById(R.id.topicName);
+                //topic.setText("Làm gì khi rảnh");
+                i.putExtra("topicName","Làm gì khi rảnh");
+                i.putExtra("topicRate","3/5");
+                i.putExtra("topicDescription","Chi tiết của chủ đề");
+                i.putExtra("topicMission","Nhiệm vụ của chủ đề");
+                i.putExtra("topicMission_details","Chi tiết nhiệm vụ");
+                startActivity(i);
+
             }
         });
         topic3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //setting text on text view on course_detail layout for topic3
-                setContentView(R.layout.course_detail);
-                TextView textview=findViewById(R.id.topicName);
-                textview.setText("Làm gì trong tg rảnh ?");
-                setContentView(R.layout.course_detail);
+                Intent i = new Intent(v.getContext(), DetailsActivity.class);
+               // TextView topic = findViewById(R.id.topicName);
+                //topic.setText("Môn học yêu thích");
+                i.putExtra("topicName","Môn học yêu thích");
+                i.putExtra("topicRate","5/5");
+                i.putExtra("topicDescription","Chi tiết của chủ đề");
+                i.putExtra("topicMission","Nhiệm vụ của chủ đề");
+                i.putExtra("topicMission_details","Chi tiết nhiệm vụ");
+                startActivity(i);
             }
         });
 
