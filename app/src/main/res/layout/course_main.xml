@@ -18,15 +18,17 @@
 
     <ImageView
         android:id="@+id/pic1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintVertical_weight="1"
-        app:layout_constraintLeft_toRightOf="@id/Details"
-        app:layout_constraintBaseline_toTopOf="parent"
+        android:layout_width="150dp"
+        android:layout_height="184dp"
         android:src="@drawable/topic_main_icon"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@id/Details"
         app:layout_constraintRight_toRightOf="parent"
 
-        />
+        app:layout_constraintVertical_weight="1"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
         android:id="@+id/subject1"
         android:layout_width="wrap_content"
@@ -35,32 +37,42 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBaseline_toBottomOf="@id/pic1"
         app:layout_constraintBottom_toBottomOf="@id/pic1"
+
         />
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/subject1">
+        app:layout_constraintTop_toBottomOf="@id/subject1"
+        android:weightSum="3">
     <ImageButton
         android:id="@+id/Topic1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:contextClickable="true"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/self_introduce"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_weight="1"
+        android:foregroundGravity="center"
         />
+
     <ImageButton
         android:id="@+id/Topic2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contextClickable="true"
         app:layout_constraintLeft_toRightOf="@id/Topic1"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/freetime_activity"
         android:layout_toRightOf="@id/Topic1"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
-
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:foregroundGravity="center"
         />
 
         <ImageButton
@@ -72,6 +84,12 @@
             android:adjustViewBounds="true"
             android:src="@drawable/favorite_subject"
             android:layout_toRightOf="@id/Topic2"
-            app:layout_constraintLeft_toRightOf="@id/Topic2" />
-    </RelativeLayout>
+            app:layout_constraintLeft_toRightOf="@id/Topic2"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
