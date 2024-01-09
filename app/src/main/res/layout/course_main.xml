@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FAF8EC"
     tools:context=".CourseMainActivity">
 
     <TextView
@@ -18,8 +19,8 @@
 
     <ImageView
         android:id="@+id/pic1"
-        android:layout_width="150dp"
-        android:layout_height="184dp"
+        android:layout_width="183dp"
+        android:layout_height="146dp"
         android:src="@drawable/topic_main_icon"
         app:layout_constraintBaseline_toTopOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -34,61 +35,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Chủ đề cơ bản"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBaseline_toBottomOf="@id/pic1"
         app:layout_constraintBottom_toBottomOf="@id/pic1"
+        app:layout_constraintLeft_toLeftOf="parent"
 
         />
+
     <LinearLayout
         android:id="@+id/layout1"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/subject1"
-        android:weightSum="3">
-    <ImageButton
-        android:id="@+id/Topic1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:contextClickable="true"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:src="@drawable/self_introduce"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:layout_weight="1"
-        android:foregroundGravity="center"
-        />
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@id/subject1">
 
-    <ImageButton
-        android:id="@+id/Topic2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contextClickable="true"
-        app:layout_constraintLeft_toRightOf="@id/Topic1"
-        android:src="@drawable/freetime_activity"
-        android:layout_toRightOf="@id/Topic1"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:foregroundGravity="center"
-        />
+        <ImageButton
+            android:id="@+id/Topic1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contextClickable="true"
+            android:foregroundGravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/self_introduce"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageButton
+            android:id="@+id/Topic2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/Topic1"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contextClickable="true"
+            android:foregroundGravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/freetime_activity"
+            app:layout_constraintLeft_toRightOf="@id/Topic1" />
 
         <ImageButton
             android:id="@+id/Topic3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contextClickable="true"
-            android:scaleType="fitCenter"
-            android:adjustViewBounds="true"
-            android:src="@drawable/favorite_subject"
-            android:layout_toRightOf="@id/Topic2"
-            app:layout_constraintLeft_toRightOf="@id/Topic2"
-            android:layout_weight="1"
             android:layout_gravity="center"
+            android:layout_toRightOf="@id/Topic2"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:contextClickable="true"
             android:foregroundGravity="center"
-            />
+            android:scaleType="fitCenter"
+            android:src="@drawable/favorite_subject"
+            app:layout_constraintLeft_toRightOf="@id/Topic2" />
     </LinearLayout>
 
 
