@@ -2,18 +2,12 @@ package com.example.androidproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-import com.google.android.material.button.MaterialButton;
-
-import org.w3c.dom.Text;
-
-public class MainActivity extends AppCompatActivity {
+public class CourseMainActivity extends AppCompatActivity {
 
     ImageButton topic1,topic2,topic3;
     @Override
