@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/avatarImageView"
@@ -61,73 +61,104 @@
         android:textSize="16sp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/addressTextView"
         android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/experienceButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_background"
+                android:layout_weight="1"
                 android:elevation="4dp"
+                android:backgroundTint="#ffff00"
+                android:textColor="#000000"
                 android:padding="8dp" />
+
             <Space
                 android:layout_width="10dp"
                 android:layout_height="wrap_content" />
+
+
             <Button
                 android:id="@+id/top3Button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_background"
+                android:layout_weight="1"
                 android:elevation="4dp"
-                android:padding="8dp" />
+                android:backgroundTint="#ffff00"
+                android:textColor="#000000"
+                android:padding="10dp" />
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baseline_circle_24">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="#ffffff"
+                android:background="@drawable/mic" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#ffffff"
+            android:text="Phát âm"
+            />
         <TextView
             android:id="@+id/pronunciationTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="5dp"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/goodSoundsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Các âm đọc tốt:"
+            android:background="@drawable/border_background"
+            android:text="Các âm đọc tốt:          "
             android:textSize="16sp" />
+
         <SeekBar
             android:id="@+id/comparisonSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:max="100" />
+
         <TextView
             android:id="@+id/improvementSoundsTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_background"
             android:text="Các âm cần cải thiện:"
             android:textSize="16sp" />
+
         <SeekBar
             android:id="@+id/improvementSeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"
             android:max="100" />
+
         <TextView
             android:id="@+id/percentageTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Đánh giá theophần trăm:"
+            android:text="Đánh giá theo phần trăm:"
             android:textSize="16sp" />
 
     </LinearLayout>

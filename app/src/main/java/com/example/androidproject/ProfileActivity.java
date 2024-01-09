@@ -15,7 +15,7 @@ public class ProfileActivity extends AppCompatActivity {
     private ImageView avatarImageView;
     private TextView nameTextView, titleTextView, descriptionTextView, emailTextView, phoneTextView, addressTextView, pronunciationTextView;
     private Button experienceButton, top3Button;
-    private SeekBar comparisonSeekBar;
+    private SeekBar comparisonSeekBar, improvementSeekBar;
     private TextView goodSoundsTextView, improvementSoundsTextView, percentageTextView;
 
     @Override
@@ -35,6 +35,7 @@ public class ProfileActivity extends AppCompatActivity {
         experienceButton = findViewById(R.id.experienceButton);
         top3Button = findViewById(R.id.top3Button);
         comparisonSeekBar = findViewById(R.id.comparisonSeekBar);
+        improvementSeekBar=findViewById((R.id.improvementSeekBar));
         goodSoundsTextView = findViewById(R.id.goodSoundsTextView);
         improvementSoundsTextView = findViewById(R.id.improvementSoundsTextView);
         percentageTextView = findViewById(R.id.percentageTextView);
@@ -59,8 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
         String pronunciation = "[ngʊjən trɔŋ tʰwi]";
         int experiencePoints = 1000;
         int top3Count = 5;
-        int progress = 75; // Giá trị phần trăm (0-100) mà bạn muốn hiển thị
-
+        int progress = 100;
         // Thiết lập nội dung cho các thành phần giao diện
         avatarImageView.setImageResource(R.drawable.lmht);
         nameTextView.setText(name);
@@ -73,6 +73,7 @@ public class ProfileActivity extends AppCompatActivity {
         experienceButton.setText("Experience: " + experiencePoints + " points");
         top3Button.setText("Top 3: " + top3Count + " times");
         comparisonSeekBar.setProgress(progress);
+        improvementSeekBar.setProgress(progress);
         percentageTextView.setText("Đánh giá theo phần trăm: " + progress + "%");
         goodSoundsTextView.setText("Các âm làm tốt:\n" + getSoundList(goodSoundsEvaluationMap));
         improvementSoundsTextView.setText("Các âm cần cải thiện:\n" + getSoundList(improvementSoundsEvaluationMap));
